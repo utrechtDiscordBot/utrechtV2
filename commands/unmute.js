@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, arguments) => {
         user.removeRole(Role.id);
         user.addRole(Role2.id);
 
-        return message.channel.send(`${user} is volledig ge-unmute!`);
+        message.channel.send(`${user} is volledig ge-unmute!`);
 
 });
 }
