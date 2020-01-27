@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  
     // ID van de categorie van de tickets.
-    const categoryId = "665877851509227521";
+    const categoryId = "669920780229804042";
 
     var argumenten = args.join(" ");
     if(!argumenten) argumenten = "Niet opgegeven";
@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
     // Maak kanaal en zet in juiste categorie.
     message.guild.createChannel(userName + "-#" + userDiscriminator, "text").then((createdChan) => { // Maak kanaal
  
-        createdChan.setParent(categoryId).then((settedParent) => { // Zet kanaal in category.
+        createdChan.setParent(categoryId, "665877851509227521").then((settedParent) => { // Zet kanaal in category.
  
             // Zet perms voor iedereen
             settedParent.overwritePermissions(message.guild.roles.find('name', "Speler"), { "READ_MESSAGES": false });

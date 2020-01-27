@@ -3,13 +3,13 @@ const discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
  
     // Id van category van tickets.
-    const categoryId = "665877851509227521";
+    const categoryId = `669920780229804042`;
  
     var argumenten = args.join(" ");
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Jij kunt dit niet doen!");
     if(!argumenten) return message.channel.send("Geef een reden op om de ticket te sluiten!");
     // Als bericht in ticket kanaal is dan verwijder kanaal ander zend bericht
-    if (argumenten, message.channel.parentID == categoryId) {
+    if (argumenten, message.channel.parentID == categoryId, "665877851509227521") {
         
         message.channel.delete();
  
