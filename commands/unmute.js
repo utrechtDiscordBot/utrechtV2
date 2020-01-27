@@ -18,6 +18,7 @@ module.exports.run = async (bot, message, arguments) => {
 
         var unmute = new discord.RichEmbed()
         .setDescription(`${user} is ge-unmute!`)
+        .setColor("#00ee00")
         .setTimestamp();
 
 

@@ -53,6 +53,7 @@ module.exports.run = async (bot, message, arguments) => {
 
     var mutemute = new discord.RichEmbed()
         .setDescription(`${user} is gemute!`)
+        .setColor("#FF0000")
         .addField("Mute tijd: ", muteTime)
         .addField("Muted door: ", message.author)
         .addField("Muted speler:", muteUser)
