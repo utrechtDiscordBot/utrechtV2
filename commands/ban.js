@@ -1,12 +1,12 @@
 const discord = require("discord.js");
 
-module.exports.run = async (bot, message, arguments) => {
+module.exports.run = async (bot, message, args) => {
 
-    var banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(arguments[0]));
+    var banUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
     if (!banUser) return message.channel.send("Speler niet gevonden.");
 
-    var reason = arguments.join(" ").slice(22);
+    var reason = args.join(" ").slice(22);
     if(!reason) return message.channel.send("Vergeet de reden niet.")
 
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Alleen staff leden kunnen dit.");
