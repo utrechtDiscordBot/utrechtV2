@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, arguments) => {
 
     setTimeout(function() {
         user.removeRole(Role.id);
-        user.addRole(Rold2.id);
+        user.addRole(Role2.id);
 
 });
 }
