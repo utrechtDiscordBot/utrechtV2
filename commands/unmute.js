@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, arguments) => {
         var mKanaal = message.guild.channels.find(`name`, "logs");
         if(!mKanaal) return message.channel.send("Kan het kanaal niet vinden!");
     
-        mKanaal.send(mEmbed)
+        mKanaal.send(unmute)
 
 });
 }
