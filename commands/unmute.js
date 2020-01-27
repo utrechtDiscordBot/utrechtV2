@@ -15,6 +15,17 @@ module.exports.run = async (bot, message, arguments) => {
 
         message.channel.send(`${user} is volledig ge-unmute!`);
 
+
+        var unmute = new discord.RichEmbed()
+        .setDescription(`${user} is ge-unmute!`)
+        .setTimestamp();
+
+
+        var mKanaal = message.guild.channels.find(`name`, "logs");
+        if(!mKanaal) return message.channel.send("Kan het kanaal niet vinden!");
+    
+        mKanaal.send(mEmbed)
+
 });
 }
 
