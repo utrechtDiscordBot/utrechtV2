@@ -28,7 +28,7 @@ module.exports.run = async (bot, message, arguments) => {
     await(muteUser.removeRole(muteRole2.id));
 
     var mutemute = new discord.RichEmbed()
-    .setDescription(`${user} is gemute!`)
+    .setDescription(`${muteUser} is gemute!`)
     .setColor("#FF0000")
     .addField("Mute tijd: ", muteTime)
     .addField("Muted door: ", message.author)
