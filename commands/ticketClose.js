@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Jij kunt dit niet doen!");
     if(!argumenten) return message.channel.send("Geef een reden op om de ticket te sluiten!");
     // Als bericht in ticket kanaal is dan verwijder kanaal ander zend bericht
-    if (argumenten, message.channel.parentID == categoryId, "665877851509227521") {
+    if (argumenten, message.channel.parentID == categoryId) {
         
         message.channel.delete();
  

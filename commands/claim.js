@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     const categoryId = "669920780229804042";
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Jij kunt dit niet doen!");
     // Als bericht in ticket kanaal is dan verwijder kanaal ander zend bericht
-    if (message.channel.parentID !== categoryId, "665877851509227521") {
+    if (message.channel.parentID !== categoryId) {
 
         return message.channel.send("Gelieve dit commando in een ticket kanaal te doen.");
  
