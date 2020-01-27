@@ -59,6 +59,8 @@ module.exports.run = async (bot, message, arguments) => {
         .addField("Muted speler:", muteUser)
         .setTimestamp();
 
+        var mKanaal = message.guild.channels.find(`name`, "logs");
+        if(!mKanaal) return message.channel.send("Kan het kanaal niet vinden!");
 
         mKanaal.send(mutemute)
 
