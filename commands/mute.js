@@ -27,12 +27,40 @@ module.exports.run = async (bot, message, arguments) => {
 
     await(muteUser.removeRole(muteRole2.id));
 
+
+
+
+    var unmute = new discord.RichEmbed()
+        .setDescription(`${user} is nu unmuted!`)
+        .setTimestamp();
+
+
+        var mKanaal = message.guild.channels.find(`name`, "logs");
+        if(!mKanaal) return message.channel.send("Kan het kanaal niet vinden!");
+    
+        mKanaal.send(unmute)
+
+
     setTimeout(function() {
         muteUser.removeRole(muteRole.id);
         muteUser.addRole(muteRole2.id);
 
-        message.channel.send(`${muteUser} is unmuted!`);
+        message.channel.send(unmute);
+
+
     }, ms(muteTime));
+
+
+    var mutemute = new discord.RichEmbed()
+        .setDescription(`${user} is gemute!`)
+        .addField("Mute tijd: ", muteTime)
+        .addField("Muted door: ", message.author)
+        .addField("Muted speler:", muteUser)
+        .setTimestamp();
+
+
+        mKanaal.send(mutemute)
+
 
 }
 
